@@ -156,9 +156,9 @@
         if ([viewOrView isKindOfClass:[UIView class]]) {
             
             UIView * marginview=viewOrView;
-            if (CGRectIntersectsRect([self frame], marginview.frame) ) {
-                //有重叠部分
-                frame.origin.x=CGRectGetMaxX(marginview.frame) - CGRectGetWidth([self frame]) - value;
+            if ([self isDescendantOfView:marginview]) {
+                NSLog(@"已添加上");
+                frame.origin.x=CGRectGetWidth(marginview.frame) - CGRectGetWidth([self frame]) - value;
             }else{
                 frame.origin.x=CGRectGetMinX(marginview.frame) - CGRectGetWidth([self frame]) - value;
             }
@@ -176,11 +176,12 @@
         if ([viewOrView isKindOfClass:[UIView class]]) {
             
             UIView * marginview=viewOrView;
-            if (CGRectIntersectsRect([self frame], marginview.frame) ) {
-                //有重叠部分
+            if ([self isDescendantOfView:marginview]) {
+                NSLog(@"已添加上");
                 frame.origin.x=value;
             }else{
-                frame.origin.x=CGRectGetMaxX(marginview.frame) + value;
+                frame.origin.x=value;
+//                frame.origin.x=CGRectGetMaxX(marginview.frame) + value;
             }
         }
         [self setFrame:frame];
@@ -196,8 +197,8 @@
         if ([viewOrView isKindOfClass:[UIView class]]) {
             
             UIView * marginview=viewOrView;
-            if (CGRectIntersectsRect([self frame], marginview.frame) ) {
-                //有重叠部分
+            if ([self isDescendantOfView:marginview]) {
+                NSLog(@"已添加上");
                 frame.origin.y=value;
             }else{
                 frame.origin.y=CGRectGetMaxY(marginview.frame) + value;
@@ -216,8 +217,8 @@
         if ([viewOrView isKindOfClass:[UIView class]]) {
             
             UIView * marginview=viewOrView;
-            if (CGRectIntersectsRect([self frame], marginview.frame) ) {
-                //有重叠部分
+            if ([self isDescendantOfView:marginview]) {
+                NSLog(@"已添加上");
                 frame.origin.y=CGRectGetHeight(marginview.frame) - CGRectGetHeight([self frame]) - value;
             }else{
                 frame.origin.y=CGRectGetMinY(marginview.frame) - CGRectGetHeight([self frame])  - value;
