@@ -63,4 +63,4 @@ UIView * view_one=[[UIView alloc]init];
 该项目最低支持 iOS 8.0 和 Xcode 8.0。
 
 ## 许可证
-OncePayManager 使用 MIT 许可证，详情见 LICENSE 文件。
+OnceLayout 使用 MIT 许可证，详情见 LICENSE 文件。
