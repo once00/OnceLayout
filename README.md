@@ -6,7 +6,7 @@
 #### CocoaPods
 在 Podfile 中添加 pod 'OnceLayout'。
 执行 pod install 或 pod update。
-导入 <OncePayManager.h>。
+导入 <OnceLayout.h>。
 
 ## 手动安装
 1.下载 OnceLayout 文件夹内的所有内容。
