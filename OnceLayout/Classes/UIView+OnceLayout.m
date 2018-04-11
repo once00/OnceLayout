@@ -44,19 +44,19 @@
     return [self setFrame:frame];
 }
 
-- (CGFloat)left;
+- (CGFloat)once_left;
 {
     return CGRectGetMinX([self frame]);
 }
 
-- (void)setLeft:(CGFloat)x;
+- (void)setOnce_left:(CGFloat)x;
 {
     CGRect frame = [self frame];
     frame.origin.x = x;
     [self setFrame:frame];
 }
 
-- (CGFloat)top;
+- (CGFloat)once_top;
 {
     return CGRectGetMinY([self frame]);
 }
@@ -80,59 +80,59 @@
     [self setFrame:frame];
 }
 
-- (CGFloat)bottom;
+- (CGFloat)once_bottom;
 {
     return CGRectGetMaxY([self frame]);
 }
 
-- (void)setBottom:(CGFloat)bottom;
+- (void)setOnce_bottom:(CGFloat)once_bottom;
 {
     CGRect frame = [self frame];
-    frame.origin.y = bottom - frame.size.height;
+    frame.origin.y = once_bottom - frame.size.height;
     [self setFrame:frame];
 }
 
-- (CGFloat)centerX;
+- (CGFloat)once_centerX;
 {
     return [self center].x;
 }
 
-- (void)setCenterX:(CGFloat)centerX;
+- (void)setOnce_centerX:(CGFloat)centerX;
 {
     [self setCenter:CGPointMake(centerX, self.center.y)];
 }
 
-- (CGFloat)centerY;
+- (CGFloat)once_centerY;
 {
     return [self center].y;
 }
 
-- (void)setCenterY:(CGFloat)centerY;
+- (void)setOnce_centerY:(CGFloat)once_centerY;
 {
-    [self setCenter:CGPointMake(self.center.x, centerY)];
+    [self setCenter:CGPointMake(self.center.x, once_centerY)];
 }
 
-- (CGFloat)width;
+- (CGFloat)once_width;
 {
     return CGRectGetWidth([self frame]);
 }
 
-- (void)setWidth:(CGFloat)width;
+- (void)setOnce_width:(CGFloat)once_width;
 {
     CGRect frame = [self frame];
-    frame.size.width = width;
+    frame.size.width = once_width;
     [self setFrame:CGRectStandardize(frame)];
 }
 
-- (CGFloat)height;
+- (CGFloat)once_height;
 {
     return CGRectGetHeight([self frame]);
 }
 
-- (void)setHeight:(CGFloat)height;
+- (void)setOnce_height:(CGFloat)once_height;
 {
     CGRect frame=[self frame];
-    frame.size.height = height;
+    frame.size.height = once_height;
     [self setFrame:CGRectStandardize(frame)];
 }
 

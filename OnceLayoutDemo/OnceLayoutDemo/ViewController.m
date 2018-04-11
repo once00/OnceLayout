@@ -28,8 +28,8 @@
     UIView * view_one=[[UIView alloc]init];
     view_one.backgroundColor=[UIColor redColor];
     [self.view addSubview:view_one];
-    view_one.width=50;
-    view_one.height=50;
+    view_one.once_width=50;
+    view_one.once_height=50;
     view_one.once_rightToView(self.view, 10);
     view_one.once_topToView(self.view, 20);
     
@@ -37,8 +37,8 @@
     UIView * view_two=[[UIView alloc]init];
     view_two.backgroundColor=[UIColor purpleColor];
     [self.view addSubview:view_two];
-    view_two.width=200;
-    view_two.height=200;
+    view_two.once_width=200;
+    view_two.once_height=200;
     view_two.once_rightToView(self.view, 100);
     view_two.once_topToView(self.view, 200);
     
@@ -46,16 +46,16 @@
     UIView * view_three=[[UIView alloc]init];
     view_three.backgroundColor=[UIColor greenColor];
     [view_two addSubview:view_three];
-    view_three.width=80;
-    view_three.height=80;
+    view_three.once_width=80;
+    view_three.once_height=80;
     view_three.once_leftToView(view_two, 20);
     view_three.once_topToView(view_two, 30);
     
     UIView * view_four=[[UIView alloc]init];
     view_four.backgroundColor=[UIColor greenColor];
     [self.view addSubview:view_four];
-    view_four.width=80;
-    view_four.height=80;
+    view_four.once_width=80;
+    view_four.once_height=80;
     view_four.once_leftToView(view_two, 20);
     view_four.once_topToView(view_two, 30);
     
@@ -63,8 +63,8 @@
     UIView * view_five=[[UIView alloc]init];
     view_five.backgroundColor=[UIColor greenColor];
     [self.view addSubview:view_five];
-    view_five.width=80;
-    view_five.height=80;
+    view_five.once_width=80;
+    view_five.once_height=80;
     view_five.once_topToView(view_two, 20);
     view_five.once_rightToView(self.view, 30);
     

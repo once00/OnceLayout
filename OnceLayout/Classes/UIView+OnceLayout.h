@@ -20,19 +20,19 @@ typedef UIView *(^MarginToView)(id viewOrView , CGFloat value);
 
 @property (nonatomic, assign) CGFloat once_top;
 
-@property (nonatomic, assign) CGFloat bottom;
+@property (nonatomic, assign) CGFloat once_bottom;
 
-@property (nonatomic, assign) CGFloat left;
+@property (nonatomic, assign) CGFloat once_left;
 
 @property (nonatomic, assign) CGFloat once_right;
 
-@property (nonatomic, assign) CGFloat centerX;
+@property (nonatomic, assign) CGFloat once_centerX;
 
-@property (nonatomic, assign) CGFloat centerY;
+@property (nonatomic, assign) CGFloat once_centerY;
 
-@property (nonatomic, assign) CGFloat width;
+@property (nonatomic, assign) CGFloat once_width;
 
-@property (nonatomic, assign) CGFloat height;
+@property (nonatomic, assign) CGFloat once_height;
 
 
 /** 右间距与参照view相同，参数为“(View)”  */
